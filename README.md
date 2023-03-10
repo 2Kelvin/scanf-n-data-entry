@@ -15,3 +15,15 @@
 ```
 
 Always limit & specify the number of characters a string takes to avoid `buffer overflows`
+
+`fgets()` just like scanf() can be used to enter text data. However, it requires the maximum length of the characters to be specified. This is explicitly passed as an argument. \0 is preincluded in fget() so you don't need to subtract one character like in scanf() to accomodate it.
+
+```c
+fgets(food, sizeof(food), stdin);
+```
+
+`stdin` signifies that the **data will be coming from the keyboard**
+
+fgets() only allows you to enter strings only unlike scanf() which can enter strings and also other data types
+
+scanf() doesn't read spaces but fgets() does
